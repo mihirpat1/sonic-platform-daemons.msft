@@ -415,7 +415,9 @@ def post_port_sfp_info_to_db(logical_port_name, port_mapping, table, transceiver
                         ('supported_max_laser_freq', str(port_info_dict['supported_max_laser_freq'])
                         if 'supported_max_laser_freq' in port_info_dict else 'N/A'),
                         ('supported_min_laser_freq', str(port_info_dict['supported_min_laser_freq'])
-                        if 'supported_min_laser_freq' in port_info_dict else 'N/A')
+                        if 'supported_min_laser_freq' in port_info_dict else 'N/A'),
+                        ('vdm_supported', str(port_info_dict['vdm_supported'])
+                         if 'vdm_supported' in port_info_dict else 'N/A')
                     ])
                 # else cmis is not supported by the module
                 else:
